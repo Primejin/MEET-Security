@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* signin style */
+.signin_form_group{
+	text-align: center;
+	margin: 15px 0px;
+}
+.signin_logo{
+	margin-top: 30px;
+    width: 70px;
+    height: 75px;
+}
+.signin_form_name{
+	text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.signin_input{
+	border: solid 1px rgb(150,150,150);
+	width: 35%;
+	min-height: 25px;
+	border-radius: 5px;
+	padding: 5px 10px;
+}
+.signin_button{
+	border: none;
+	width: 39%;
+	min-height: 35px;
+	border-radius: 5px;	
+	padding: 5px 10px;
+	background-color: rgb(30, 150, 250);
+	color: white;
+}
+.google_button{
+	border: solid 1px rgb(200,200,200);
+	width: 39%;
+	min-height: 35px;
+	border-radius: 5px;	
+	padding: 5px 10px;
+	background-color: white;
+	color: black;
+}
+.kakao_button{
+	border: none;
+	width: 39%;
+	min-height: 35px;
+	border-radius: 5px;	
+	padding: 5px 10px;
+	background-color: #F7E600;
+	color: #3A1D1D;
+}
+.signup_href{
+	font-size: 14px;
+	color: rgb(100, 100, 100);
+}
+.signin_card{
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 36%;
+    left: 32%;
+    right: 32%;
+    top: 120px;
+    bottom: 10%;
+    border-radius: 10px;
+    border: solid 1px rgb(190, 190, 190);
+}

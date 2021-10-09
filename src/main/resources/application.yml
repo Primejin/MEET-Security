@@ -1,0 +1,39 @@
+server:
+  port: 8008
+  servlet:
+    context-path: /
+    encoding:
+      charset: utf-8
+      enabled: true
+      
+spring:
+#  mvc:
+#    view:
+#      prefix: /WEB-INF/views/
+#      suffix: .jsp
+      
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/meet?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: cos
+    password: cos1234
+    
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    
+  security:
+    oauth2:
+      client:
+        registration:
+         google:
+           client-id: 944578240507-teenknusb069l1g0fi6lkcia281oak1c.apps.googleusercontent.com
+           client-secret: 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
+           scope:
+            - email
+            - profile
+       
+

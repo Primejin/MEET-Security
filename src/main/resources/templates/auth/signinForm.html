@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- default 레이아웃 불러오기 -->
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/default}">
+<div layout:fragment="content">
+	<div class="signin_card">
+	<form th:action="@{/login}" method="POST">
+        <div class="signin_form_name">
+        	<img class="signin_logo" src="img/meetlogo.png"><br/>ME:ET
+        </div>
+        <!-- input태그의 자동완성 기능 off : autocomplete="off" -->
+        <div class="signin_form_group">
+        	<input class="signin_input" type="text" name="username" placeholder="아이디" autocomplete="off">
+        </div>
+        <div class="signin_form_group">
+        	<input class="signin_input" type="password" name="password" placeholder="비밀번호" autocomplete="off">
+        </div>
+        <div class="signin_form_group">
+        	<button class="signin_button">로그인</button>
+        </div>
+        </form>
+        <!-- 구분선 생성 -->
+        <hr style="width: 39%;" />
+        <!-- 소셜 로그인 버튼 -->
+        <div class="signin_form_group">
+        	<button class="kakao_button">카카오톡으로 로그인하기</button>
+        </div>
+        <div class="signin_form_group">
+        	<button class="google_button" onclick="location.href='/oauth2/authorization/google'">Google로 로그인하기</button>
+        </div>
+       	<!-- signup.html로 이동하는 url -->
+        <div class="signin_form_group">
+        	<p class="signup_href">회원가입을 하지 않으셨나요? <a th:href="@{/signupForm}">회원가입</a></p>
+        </div>
+	</div>
+</div>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/default}">
+<header th:fragment="headerFragment">
+	<nav class="header_nav">
+		<img class="header_logo" src="img/logo.png">
+		<p class="header_name">ME:ET</p>
+	</nav>
+		<ul>
+			<!-- Main 페이지는 호출 주소 없이 그냥 / 이므로 a href=""비어놓은거 -->
+			<li class="header_list"><a href=""><img style="padding-top: 3px;" src="/img/home.png"></a></li>
+			<li class="header_list"><a href="signinForm"><img style="padding-top: 3px;" src="/img/user.png"></a></li>
+		</ul>
+</header>
+</html>
