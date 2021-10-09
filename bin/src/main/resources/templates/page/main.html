@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- default 레이아웃 불러오기 -->
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/default}">
+<div layout:fragment="content">
+	<div class="center">
+		<img class="main_logo" src="img/main.png">
+	</div>
+	<div class="center">
+		<div class="side">
+			<!-- 각각의 modal 띄우는 버튼 생성 -->
+			<button class="main_button_create" id="create_room_btn" onclick="openCreate();">채팅방 개설</button>
+			<button class="main_button_join" type="button" id="join_room_btn" onclick="openJoin();">채팅방 입장</button>
+		</div>
+	</div>
+	<!-- 채팅방 개설 modal -->
+	<div class="create_modal hidden">
+		<div class="create_modal_box">
+			<div class="modal_name">채팅방 개설</div>
+			<form class="main_form" action="#">
+				<!-- 입장코드 그룹 -->
+				<div class="main_group">
+					<label class="main_label">입장코드</label>
+					<div>
+						<!-- input을 readonly로 바꾸고 버튼 클릭시 input 내용 복사 -->
+						<input class="main_input" type="text" id="joinCode" readonly>
+						<button class="copy_button" onclick="copyText();"><img class="img_copy" src="img/copy.png"></button>
+					</div>
+					<div class="main_placeholder">입장코드는 자동으로 생성됩니다.</div>
+				</div>
+				<!-- 방제목 그룹 -->
+				<div class="main_group">
+					<label class="main_label">방 제목</label>
+					<input class="main_input" type="text">
+					<div class="main_placeholder">채팅방 제목을 입력하세요.</div>
+				</div>
+				<!-- 닉네임 그룹 --> 
+				<div class="main_group">
+					<label class="main_label">닉네임</label>
+					<input class="main_input" type="text">
+					<div class="main_placeholder">채팅방에서 사용할 이름을 입력하세요.</div>
+				</div>
+				<!-- 마이크 테스트 아이콘 -->
+				<div class="main_group">
+					<button class="mic_button"><img class="img_mic" src="img/microphone.png"></button>
+				</div>
+			</form>
+			<!-- 채팅방 개설 modal 끄기 -->
+			<div class="center">
+				<button class="close_button" onclick="createClose()">취소</button>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 채팅방 입장 modal -->
+	<div class="join_modal hidden">
+		<div class="join_modal_box">
+			<div class="modal_name">채팅방 입장</div>
+			<form class="main_form" action="#">
+				<!-- 입장코드 그룹 -->
+				<div class="main_group">
+					<label class="main_label">입장코드</label>
+					<input class="main_input" type="text">
+					<div class="main_placeholder">초대받은 입장코드를 입력해주세요.</div>
+				</div>
+				<!-- 방제목 그룹 -->
+				<div class="main_group">
+					<label class="main_label">방 제목</label>
+					<input class="main_input" type="text">
+					<div class="main_placeholder">채팅방 제목을 입력하세요.</div>
+				</div>
+				<!-- 닉네임 그룹 -->
+				<div class="main_group">
+					<label class="main_label">닉네임</label>
+					<input class="main_input" type="text">
+					<div class="main_placeholder">채팅방에서 사용할 이름을 입력하세요.</div>
+				</div>
+				<!-- 마이크 테스트 아이콘-->
+				<div class="main_group">
+					<button class="mic_button"><img class="img_mic" src="img/microphone.png"></button>
+				</div>
+			</form>
+			<div class="center">
+				<button class="close_button" onclick="joinClose()">취소</button>
+			</div>
+		</div>
+	</div>
+</div>
+</html>

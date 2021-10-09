@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/default}">
+<div layout:fragment="content">
+	<form class="edit_card" action="" method="">
+		<div class="form_name">회원정보 수정</div>
+		<div class="form_group">
+			<label class="form_label">이메일</label>
+			<input class="form_input" type="text" th:value="${session.email}">
+			<div class="form_placeholder">이메일 입력</div>
+		</div>
+		<button class="button submit_button" type="submit">수정</button>
+	</form>
+</div>
+</html>
