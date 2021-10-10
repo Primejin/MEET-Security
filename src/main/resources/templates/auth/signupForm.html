@@ -2,24 +2,25 @@
 <!-- default 레이아웃 불러오기 -->
 <html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/default}">
 <div layout:fragment="content">
-	<div class="signup_card">
+	<div class="form_card">
 		<!-- 회원가입 완료 시 signin.html로 이동 -->
         <form th:action="@{/signup}" method="POST">
-            <p class="signup">회원가입</p>
+            <div class="form_name">회원가입</div>
             <!-- 아이디 생성 시 중복검사를 통해 확인 -->
-            <div class="signup_form">
-                <label class="signup_form_name" for="username">아이디</label><br/>
-                <div>
-                	<input class="signup_form_input signup_input" type="text" id="username" name="username" placeholder="아이디를 입력하세요." autocomplete="off"/>
-                </div>
+            <div class="form_group">
+                <label class="form_label" for="username">아이디</label>
+				<input class="form_input" type="text" id="username" name="username" autocomplete="off"/>
+				<div class="form_placeholder">아이디를 입력하세요.</div>
             </div>
-            <div class="signup_form">
-                <label class="signup_form_name" for="password">비밀번호</label><br/>
-                <input class="signup_form_input signup_input" type="password" id="password" name="password" placeholder="비밀번호를 입력하세요." autocomplete="off"/>
+            <div class="form_group">
+                <label class="form_label" for="password">비밀번호</label>
+                <input class="form_input" type="password" id="password" name="password" autocomplete="off"/>
+                <div class="form_placeholder">비밀번호 입력</div>
             </div>
-            <div class="signup_form">
-                <label class="signup_form_name" for="email">이메일</label><br/>
-                <input class="signup_form_input signup_input" type="email" id="email" name="email" placeholder="이메일을 입력하세요." autocomplete="off"/>
+            <div class="form_group">
+                <label class="form_label" for="email">이메일</label>
+                <input class="form_input" type="email" id="email" name="email" autocomplete="off"/>
+                <div class="form_placeholder">이메일 입력</div>
             </div>
 <!--            
             <div class="signup_form">
@@ -43,7 +44,7 @@
                 <label class="radio_label" for="gender">여자</label>
             </div> 
 -->
-            <button class="submit_button" type="submit">가입</button>
+            <button class="button submit_button" type="submit">가입</button>
         </form>
     </div>
 </div>

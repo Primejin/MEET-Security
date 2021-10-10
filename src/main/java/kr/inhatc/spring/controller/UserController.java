@@ -1,7 +1,11 @@
 package kr.inhatc.spring.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Controller;
@@ -54,11 +58,30 @@ public class UserController {
 		return "user";
 	}
 	
+	// 세션 테스트를 위한 코드 삽입
 	@GetMapping({"/","/main"})
-	public String main() {
+	public String main(HttpServletRequest request) {
+		// 현재 인증 값 가져오기
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		UserDetails user = (UserDetails) authentication.getPrincipal();
+		// userId 값 가져오기
+		String username = user.getUsername();
+		System.out.println("username :: " + username);
+		// Session 생성
+		HttpSession session = request.getSession();
+		// 사용자 정보 가져오기
+		User userEntity = userRepository.findByUsername(username);
+		session.setAttribute("id", userEntity.getId());
+		session.setAttribute("username", userEntity.getUsername());
+		session.setAttribute("email", userEntity.getEmail());
 		return "page/main";
 	}
 	
+	// userEdit 테스트를 위한 코드 삽입
+	@GetMapping("/userEdit")
+	public String userEdit() {
+		return "auth/userEdit";
+	}
 	@GetMapping("/signinForm")
 	public String signinForm() {
 		return "auth/signinForm";

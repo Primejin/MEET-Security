@@ -1,8 +1,5 @@
 @charset "UTF-8";
 /* main style*/
-.center{
-	text-align: center;
-}
 .main_logo{
 	width: 50%;
 	margin: 50px;
@@ -31,29 +28,7 @@
 	display: flex;
 	flex-direction: column;
 }
-.main_group{
-	display: flex;
-	flex-direction: column;
-	margin: 5px 20px;
-}
-.main_label{
-	font-size: 20px;
-	font-weight: bold;
-	color: black;
-}
-.main_input{
-	border: none;
-	border-bottom: solid 1px rgb(0,0,0);
-	width: 50%;
-}
-.main_placeholder{
-	margin: 5px 0px;
-	color: rgb(0, 200, 255);
-	font-size: 13px;
-}
-.main_input:focus{
-	outline: none;
-}
+
 
 /* create modal */
 .create_modal{
@@ -63,9 +38,6 @@
 	top: 0;
 	left: 0;
 	background: rgba(0,0,0, 0.5);
-}
-.hidden{
-	display: none;
 }
 .join_modal{
 	position: fixed;
@@ -91,12 +63,6 @@
 	left: 30%;
 	width: 40%;
 	border-radius: 10px;
-}
-.modal_name{
-	color: rgb(30, 150, 250);
-	font-size: 30px;
-	margin: 20px 25px;
-	font-weight: bold;
 }
 .close_button{
 	width: 20%;
