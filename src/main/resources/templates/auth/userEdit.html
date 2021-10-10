@@ -3,6 +3,7 @@
 <div layout:fragment="content">
 	<form class="form_card" action="" method="">
 		<div class="form_name">회원정보 수정</div>
+		<div class="form_placeholder" style="margin: 5px 25px;">아이디와 비밀번호는 변경할 수 없습니다.</div>
 		<div class="form_group">
 			<label class="form_label">아이디</label>
 			<input class="form_input" type="text" th:value="${session.username}" readonly="readonly">

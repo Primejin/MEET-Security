@@ -18,11 +18,17 @@
 	background-color: rgb(150, 255, 255);
 	width: 35%;
 }
+.main_button_create:focus{
+	background-color: rgb(130, 235, 235);
+}
 .main_button_join{
 	border: none;
 	border-radius: 5px;
 	background-color: rgb(255, 255, 150);
 	width: 35%;
+}
+.main_button_join:focus{
+	background-color: rgb(235, 235, 130);
 }
 .main_form{
 	display: flex;
@@ -72,6 +78,9 @@
 	color: white;
 	border: none;
 	border-radius: 5px;
+}
+.close_button:focus{
+	background-color: rgb(0, 130, 235);
 }
 .img_copy{
 	width: 15px;

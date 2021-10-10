@@ -10,6 +10,9 @@
    	margin-left: 45%;
     margin-bottom: 20px;
 }
+.submit_button:focus{
+	background-color: rgb(0,130, 235);
+}
 /* signin style */
 .signin_form_group{
 	text-align: center;
@@ -112,13 +115,19 @@
 	margin: 20px 40px;
 }
 .info_label{
-	font-size: 20px;
+	font-size: 22px;
 	font-weight: bold;
-	color: black;
+	color: rgb(0, 150, 255);
 	margin: 20px 30px;
 }
+.info_sub_label{
+	font-size: 18px;
+	font-weight: bold;
+	margin: 5px 0px;
+}
 .info_value{
-	
+	margin: 5px 0px;
+	color: rgb(120, 120, 120);
 }
 .edit_button{
 	top: 150px;
@@ -128,5 +137,7 @@
 	color: white;
 	padding: 10px 30px;
 	border-radius: 5px;
-	
+}
+.edit_button:focus{
+	background-color: rgb(0, 130, 235);
 }
