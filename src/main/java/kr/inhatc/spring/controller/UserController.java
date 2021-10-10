@@ -74,6 +74,7 @@ public class UserController {
 		session.setAttribute("id", userEntity.getId());
 		session.setAttribute("username", userEntity.getUsername());
 		session.setAttribute("email", userEntity.getEmail());
+		session.setAttribute("password", userEntity.getPassword());
 		return "page/main";
 	}
 	
@@ -81,6 +82,11 @@ public class UserController {
 	@GetMapping("/userEdit")
 	public String userEdit() {
 		return "auth/userEdit";
+	}
+	// userInfo 테스트를 위한 코드 삽입
+	@GetMapping("/userInfo")
+	public String userInfo() {
+		return "auth/userInfo";
 	}
 	@GetMapping("/signinForm")
 	public String signinForm() {

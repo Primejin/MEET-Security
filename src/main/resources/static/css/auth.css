@@ -92,3 +92,41 @@
     border-radius: 10px;
     border: solid 1px rgb(190, 190, 190);
 }
+/* userInfo style */
+.info_card{
+	position: relative;
+	display: inline-table;
+	width: 30%;
+	min-height: 30vh;
+	left: 16%;
+	top: 150px;
+	margin: 30px 2%;
+	padding: 30px 10px;
+	border: solid 1px rgb(200, 200, 200);
+	border-radius: 5px;
+	
+}
+.info_group{
+	display: flex;
+	flex-direction: column;
+	margin: 20px 40px;
+}
+.info_label{
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+	margin: 20px 30px;
+}
+.info_value{
+	
+}
+.edit_button{
+	top: 150px;
+	left: 90%;
+	position: fixed;
+	background-color: rgb(0, 150, 255);
+	color: white;
+	padding: 10px 30px;
+	border-radius: 5px;
+	
+}

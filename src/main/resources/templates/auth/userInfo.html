@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/default}">
+<div layout:fragment="content">
+	<div class="info_card">
+		<label class="info_label">프로필</label>
+		<div class="info_group">
+			<label class="info_sub_label">아이디</label>
+			<div class="info_value" th:text="${session.username}"></div>
+		</div>
+		<div class="info_group">
+			<label class="info_sub_label">비밀번호</label>
+			<div class="info_value"></div>
+		</div>
+	</div>
+	<div class="info_card">
+		<label class="info_label">연락처 및 알림</label>
+		<div>
+			<div class="info_group">
+				<label class="info_sub_label">이메일</label>
+				<div class="info_value" th:text="${session.email}"></div>
+			</div>
+			<div class="info_group">
+				<label class="info_sub_label">연락처</label>
+				<div class="info_value">세션으로 연락처 가져옴</div>
+			</div>
+		</div>
+	</div>
+	<a class="button href edit_button" href="userEdit">수정</a>
+</div>
+</html>

@@ -4,6 +4,14 @@
 	<form class="form_card" action="" method="">
 		<div class="form_name">회원정보 수정</div>
 		<div class="form_group">
+			<label class="form_label">아이디</label>
+			<input class="form_input" type="text" th:value="${session.username}" readonly="readonly">
+		</div>
+		<div class="form_group">
+			<label class="form_label">비밀번호</label>
+			<input class="form_input" type="password" th:value="${session.password}" readonly="readonly">
+		</div>
+		<div class="form_group">
 			<label class="form_label">이메일</label>
 			<input class="form_input" type="text" th:value="${session.email}">
 			<div class="form_placeholder">수신받으실 이메일을 입력해주세요.</div>
